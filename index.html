@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Tip Calculator</title>
+    </head>
+    <body>
+        <div>
+            <div>
+                <label for="bill" required
+                    >Please enter the total bill amount:</label
+                >
+                <input
+                    type="number"
+                    id="bill"
+                    class="bill"
+                    name="bill"
+                    min="1"
+                />
+            </div>
+            <div>
+                <p>Please select the service level:</p>
+                <input
+                    type="radio"
+                    class="servLevel"
+                    id="outstanding"
+                    name="servLevel"
+                    value="0.3"
+                />
+                <label for="outstanding">Outstanding</label><br />
+                <input
+                    type="radio"
+                    class="servLevel"
+                    id="good"
+                    name="servLevel"
+                    value="0.2"
+                />
+                <label for="good">Good</label><br />
+                <input
+                    type="radio"
+                    class="servLevel"
+                    id="okish"
+                    name="servLevel"
+                    value="0.15"
+                />
+                <label for="okish">OKish</label><br />
+                <input
+                    type="radio"
+                    class="servLevel"
+                    id="bad"
+                    name="servLevel"
+                    value="0.1"
+                />
+                <label for="bad">Bad</label><br />
+                <input
+                    type="radio"
+                    class="servLevel"
+                    id="nevComBack"
+                    name="servLevel"
+                    value="0"
+                />
+                <label for="nevComBack">Never coming back</label><br />
+            </div>
+            <div>
+                <label for="people" required
+                    >Please select how many people are splitting the
+                    bill:</label
+                >
+                <select name="people" class="people" id="people">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div>
+                <button onclick="tip()" id="btn">Calculate</button>
+                <p id="result"></p>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
