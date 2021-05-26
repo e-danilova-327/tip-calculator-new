@@ -8,8 +8,9 @@
         <title>Tip Calculator</title>
     </head>
     <body>
-        <div>
-            <div>
+        <div class="full-height">
+            <h1 id="head">Welcome to the "HUG IN A MUG" cafe!</h1>
+            <div class="container" id="billSpace">
                 <label for="bill" required
                     >Please enter the total bill amount:</label
                 >
@@ -19,10 +20,12 @@
                     class="bill"
                     name="bill"
                     min="1"
+                    step="0.01"
                 />
             </div>
-            <div>
+            <div class="container" id="levelSpace">
                 <p>Please select the service level:</p>
+                <br />
                 <input
                     type="radio"
                     class="servLevel"
@@ -30,7 +33,7 @@
                     name="servLevel"
                     value="0.3"
                 />
-                <label for="outstanding">Outstanding</label><br />
+                <label for="outstanding">Outstanding (30%)</label><br />
                 <input
                     type="radio"
                     class="servLevel"
@@ -38,7 +41,7 @@
                     name="servLevel"
                     value="0.2"
                 />
-                <label for="good">Good</label><br />
+                <label for="good">Good (20%)</label><br />
                 <input
                     type="radio"
                     class="servLevel"
@@ -46,7 +49,7 @@
                     name="servLevel"
                     value="0.15"
                 />
-                <label for="okish">OKish</label><br />
+                <label for="okish">OKish (15%)</label><br />
                 <input
                     type="radio"
                     class="servLevel"
@@ -54,7 +57,7 @@
                     name="servLevel"
                     value="0.1"
                 />
-                <label for="bad">Bad</label><br />
+                <label for="bad">Bad (10%)</label><br />
                 <input
                     type="radio"
                     class="servLevel"
@@ -62,9 +65,9 @@
                     name="servLevel"
                     value="0"
                 />
-                <label for="nevComBack">Never coming back</label><br />
+                <label for="nevComBack">Never coming back (0%)</label><br />
             </div>
-            <div>
+            <div class="container" id="peopleSpace">
                 <label for="people" required
                     >Please select how many people are splitting the
                     bill:</label
@@ -82,8 +85,11 @@
                     <option value="10">10</option>
                 </select>
             </div>
-            <div>
-                <button onclick="tip()" id="btn">Calculate</button>
+            <div class="container" id="btnSpace">
+                <button class="button" onclick="tip()" id="btn">
+                    Calculate
+                </button>
+                <br />
                 <p id="result"></p>
             </div>
         </div>

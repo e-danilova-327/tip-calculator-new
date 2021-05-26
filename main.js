@@ -5,6 +5,7 @@ const numOfPeople_input = document.querySelector('.people');
 
 const tip = () => {
     let billAmount = Number(billAmount_input.value);
+
     for (let i = 0; i < serviceLevel_input.length; i++) {
         if (serviceLevel_input[i].checked == true) {
             serviceLevel = Number(
@@ -12,6 +13,7 @@ const tip = () => {
             );
         }
     }
+
     let numOfPeople = Number(numOfPeople_input.value);
     const res = (billAmount * serviceLevel) / numOfPeople;
     document.getElementById(
